@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="GkBb6J-LwUmtGL70ID1wxA" Reference="bSxAyAaiK0i4H8_kVmvTVw/jAGAwPQNrkSl1OVsMQ4-Ew" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="account.uipath.com/login" CVScreenId="6a9fbba6-460b-428c-8f48-a173245892a7" CvElementArea="826, 444, 45, 36" CvType="Icon" DesignTimeRectangle="829, 445, 39, 35" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='I' idx='1' /&gt;" Guid="f61b3565-aba7-47d2-9da3-9f19ba44b2fc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAAnCAYAAACWn7G7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH+SURBVFhH7ZYxS/NAGMf9ToFCpoAQEIKDCGYxOHRyylS6tIsvJMsbXCWDZMmmUBykXTpIBOlkQSovHLxwIASEfIW/g4lN786YxksTscNvyT335MfDc/fcTpIk+CnssB/azFa2LlZlY4LZ5AY3oxYwmYHEn8nOfViqAkVpER0T3j1lZWfw9gXBbUB3Ea3IPvkwcwHangHDaBIN6oePCf/pU9nlYnOM0RP4bGW/j0xZ+ojQ6eIg7TGrHyD6L4irjCzZeYhTPYvN0THhzwXxlZAiu4B/JBDN0M8QvbJ7EiQvEfzhAIMC3OuFZNkHDwYryDCYCPYxV6OQ/liy7G2P/wmDdUn4fa8E0wuXq+YSF0FuUsmRrVrZtZEhW7VnkxiLqeCxkiP6J1224m3QSM9mrHvPkivY3Pxf5eA8qkm2dn6TLL0L0Ds2oKkK1F0LtuPjKj0cwbkNa0+D0tGgH9vwRgvE+f0kxGknyy9GdyS1weOFySX/Cn04Bs1yPG/qgN2dQWcTl8QexWmeGJQQkALoS75AFWVnfw1OojQr1VqHirLjvkCiLJuWjf5ovERZhhuWTWiEwGEfHiVwvhgUhVSVbYStbF0UyZIQ3Y/FtmHCf87LJgRhlw1qCd0QJK14Kvt+6r0TlQ9uEPXQxZQu22MpmxJTfhQ2As1GdYFsm9nK1sUbaJGtX4l8IN8AAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Employees' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="14540163e91afac42e7275c4fcec4805.jpg" xmlns="">0TTE_E9EQEUSPn-Ab-BWeTA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

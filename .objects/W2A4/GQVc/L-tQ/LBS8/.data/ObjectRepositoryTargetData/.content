@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="aGamW9TRf0G6qxCdSdqzvA" Reference="bSxAyAaiK0i4H8_kVmvTVw/LBS8u2UFg0OQuqfhylktIQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/employees" CVScreenId="3fd3cd00-323a-49c3-874f-bad197a1823d" CvElementArea="826, 444, 45, 36" CvType="Icon" DesignTimeRectangle="829, 445, 39, 35" ElementVisibilityArgument="Interactive" Guid="b6022f9a-39de-4faa-95eb-dc59822e7393" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAAnCAYAAACWn7G7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH+SURBVFhH7ZYxS/NAGMf9ToFCpoAQEIKDCGYxOHRyylS6tIsvJMsbXCWDZMmmUBykXTpIBOlkQSovHLxwIASEfIW/g4lN786YxksTscNvyT335MfDc/fcTpIk+CnssB/azFa2LlZlY4LZ5AY3oxYwmYHEn8nOfViqAkVpER0T3j1lZWfw9gXBbUB3Ea3IPvkwcwHangHDaBIN6oePCf/pU9nlYnOM0RP4bGW/j0xZ+ojQ6eIg7TGrHyD6L4irjCzZeYhTPYvN0THhzwXxlZAiu4B/JBDN0M8QvbJ7EiQvEfzhAIMC3OuFZNkHDwYryDCYCPYxV6OQ/liy7G2P/wmDdUn4fa8E0wuXq+YSF0FuUsmRrVrZtZEhW7VnkxiLqeCxkiP6J1224m3QSM9mrHvPkivY3Pxf5eA8qkm2dn6TLL0L0Ds2oKkK1F0LtuPjKj0cwbkNa0+D0tGgH9vwRgvE+f0kxGknyy9GdyS1weOFySX/Cn04Bs1yPG/qgN2dQWcTl8QexWmeGJQQkALoS75AFWVnfw1OojQr1VqHirLjvkCiLJuWjf5ovERZhhuWTWiEwGEfHiVwvhgUhVSVbYStbF0UyZIQ3Y/FtmHCf87LJgRhlw1qCd0QJK14Kvt+6r0TlQ9uEPXQxZQu22MpmxJTfhQ2As1GdYFsm9nK1sUbaJGtX4l8IN8AAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Employees' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="3fd3cd00-323a-49c3-874f-bad197a1823d" CvTextArea="887, 451, 177, 22" CvType="Text" DesignTimeRectangle="888, 445, 175, 35" ElementType="Text" Guid="0137d4df-dcbf-424a-a385-c1b175eb8432" SearchSteps="FuzzySelector, CV">
+            <Target.CvTextArgument>
+              <p:InArgument x:TypeArguments="x:String">
+                <p:CSharpValue x:TypeArguments="x:String">Employee</p:CSharpValue>
+              </p:InArgument>
+            </Target.CvTextArgument>
+            <Target.FuzzySelectorArgument>
+              <p:InArgument x:TypeArguments="x:String">
+                <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl class='name' tag='DIV' type='' aaname='" + Employee + "' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='" + Employee + "' /&gt;"</p:CSharpValue>
+              </p:InArgument>
+            </Target.FuzzySelectorArgument>
+          </Target>
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <TargetAnchorable.FullSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl tag='I' idx='" + Index + "' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.FullSelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="ddd4ff921dcb95c7ea484eb6f016f5dd.jpg" xmlns="">0vBEePMBnhECRniR15gbOpQ</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="Employee" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

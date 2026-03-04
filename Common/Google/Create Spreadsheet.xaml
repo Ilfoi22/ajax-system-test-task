@@ -1,0 +1,268 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Create_Spreadsheet" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities" xmlns:ugdm="clr-namespace:UiPath.GSuite.Drive.Models;assembly=UiPath.GSuite" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_SecondSheetName" Type="OutArgument(x:String)" />
+    <x:Property Name="out_FirstSheetName" Type="OutArgument(x:String)" />
+    <x:Property Name="out_Spreadsheet" Type="OutArgument(ugdm:GDriveRemoteItem)" />
+    <x:Property Name="in_SecondSheetName" Type="InArgument(x:String)" />
+    <x:Property Name="in_FirstSheetName" Type="InArgument(x:String)" />
+    <x:Property Name="in_SpreadsheetName" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities.Models</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.GSuite</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Create_Spreadsheet" sap:VirtualizedContainerService.HintSize="1137,962" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="DefaultSheetName">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Аркуш1</Literal>
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uga:CreateSpreadsheetConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" FirstSheetName="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID0}" ManualEntryParentFolderId="{x:Null}" ParentFolderExisting="{x:Null}" AuthScopesInvalid="False" BrowserParentFolderFriendlyName="My Drive" BrowserParentFolderId="root" ConflictResolution="Replace" ConnectionId="0031b6ca-cc0c-4e25-8b56-f42d6308dbcc" DisplayName="Create Spreadsheet" sap:VirtualizedContainerService.HintSize="450,237" sap2010:WorkflowViewState.IdRef="CreateSpreadsheetConnections_1" ParentFolderInputMode="Browse" UseConnectionService="True">
+      <uga:CreateSpreadsheetConnections.Item>
+        <ugam:DriveItemArgument ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="root" ConnectionKey="0031b6ca-cc0c-4e25-8b56-f42d6308dbcc" FriendlyName="My Drive" FullPathHint="My Drive" InputMode="Browse">
+          <ugam:DriveItemArgument.Backup>
+            <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID0" StoredValue="Browse">
+              <usau:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </ugam:DriveItemArgument.Backup>
+          <ugam:DriveItemArgument.DriveId>
+            <InArgument x:TypeArguments="x:String" />
+          </ugam:DriveItemArgument.DriveId>
+          <ugam:DriveItemArgument.ParentIdFullPathHint>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" Value="" />
+            </InArgument>
+          </ugam:DriveItemArgument.ParentIdFullPathHint>
+        </ugam:DriveItemArgument>
+      </uga:CreateSpreadsheetConnections.Item>
+      <uga:CreateSpreadsheetConnections.NewSpreadsheet>
+        <OutArgument x:TypeArguments="ugdm:GDriveRemoteItem">
+          <CSharpReference x:TypeArguments="ugdm:GDriveRemoteItem" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">out_Spreadsheet</CSharpReference>
+        </OutArgument>
+      </uga:CreateSpreadsheetConnections.NewSpreadsheet>
+      <uga:CreateSpreadsheetConnections.SpreadsheetName>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">in_SpreadsheetName</CSharpValue>
+        </InArgument>
+      </uga:CreateSpreadsheetConnections.SpreadsheetName>
+    </uga:CreateSpreadsheetConnections>
+    <uga:AddSheetConnections BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" PositionIndex="{x:Null}" AuthScopesInvalid="False" ConflictResolution="Fail" ConnectionId="29a8b1e3-ef67-4e3b-85d4-065f6aebde7f" DisplayName="Add Sheet" sap:VirtualizedContainerService.HintSize="450,237" sap2010:WorkflowViewState.IdRef="AddSheetConnections_2" ItemSelectionMode="UseExisting" UseConnectionService="True">
+      <uga:AddSheetConnections.FileIdBackup>
+        <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID2" StoredValue="UseExisting">
+          <usau:BackupSlot.BackupValues>
+            <scg:List x:TypeArguments="x:Object" x:Key="Browse" Capacity="3">
+              <InArgument x:TypeArguments="x:String">https://docs.google.com/spreadsheets/d/1QIU1KgaANFzX0A0xXwrC--7DMDYT1A683TZN2NQ6PEc/edit?usp=drivesdk</InArgument>
+              <InArgument x:TypeArguments="x:String" />
+              <InArgument x:TypeArguments="x:String">Ajax System Test Task</InArgument>
+            </scg:List>
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:AddSheetConnections.FileIdBackup>
+      <uga:AddSheetConnections.Item>
+        <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID2}" BrowserId="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" DriveId="{x:Null}" Existing="{x:Reference __ReferenceID1}" FriendlyName="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" FullPathHint="My Drive/Ajax System Test Task" InputMode="UseExisting">
+          <ugam:DriveItemArgument.ParentIdFullPathHint>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" Value="" />
+            </InArgument>
+          </ugam:DriveItemArgument.ParentIdFullPathHint>
+        </ugam:DriveItemArgument>
+      </uga:AddSheetConnections.Item>
+      <uga:AddSheetConnections.NewSheetName>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">out_FirstSheetName</CSharpReference>
+        </OutArgument>
+      </uga:AddSheetConnections.NewSheetName>
+      <uga:AddSheetConnections.SheetName>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">in_FirstSheetName</CSharpValue>
+        </InArgument>
+      </uga:AddSheetConnections.SheetName>
+      <uga:AddSheetConnections.Spreadsheet>
+        <InArgument x:TypeArguments="ugdm:GDriveRemoteItem" x:Name="__ReferenceID1">
+          <CSharpValue x:TypeArguments="ugdm:GDriveRemoteItem" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">out_Spreadsheet</CSharpValue>
+        </InArgument>
+      </uga:AddSheetConnections.Spreadsheet>
+    </uga:AddSheetConnections>
+    <uga:AddSheetConnections BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" AuthScopesInvalid="False" ConflictResolution="Fail" ConnectionId="29a8b1e3-ef67-4e3b-85d4-065f6aebde7f" DisplayName="Add Sheet" sap:VirtualizedContainerService.HintSize="450,237" sap2010:WorkflowViewState.IdRef="AddSheetConnections_1" ItemSelectionMode="UseExisting" PositionIndex="1" UseConnectionService="True">
+      <uga:AddSheetConnections.FileIdBackup>
+        <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID4" StoredValue="UseExisting">
+          <usau:BackupSlot.BackupValues>
+            <scg:List x:TypeArguments="x:Object" x:Key="Browse" Capacity="3">
+              <InArgument x:TypeArguments="x:String">https://docs.google.com/spreadsheets/d/1QIU1KgaANFzX0A0xXwrC--7DMDYT1A683TZN2NQ6PEc/edit?usp=drivesdk</InArgument>
+              <InArgument x:TypeArguments="x:String" />
+              <InArgument x:TypeArguments="x:String">Ajax System Test Task</InArgument>
+            </scg:List>
+            <scg:List x:TypeArguments="x:Object" x:Key="UrlOrId" Capacity="1">
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">Spreadsheet</CSharpValue>
+              </InArgument>
+            </scg:List>
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:AddSheetConnections.FileIdBackup>
+      <uga:AddSheetConnections.Item>
+        <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID4}" BrowserId="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" DriveId="{x:Null}" Existing="{x:Reference __ReferenceID3}" FriendlyName="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" FullPathHint="My Drive/Ajax System Test Task" InputMode="UseExisting">
+          <ugam:DriveItemArgument.ParentIdFullPathHint>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" Value="" />
+            </InArgument>
+          </ugam:DriveItemArgument.ParentIdFullPathHint>
+        </ugam:DriveItemArgument>
+      </uga:AddSheetConnections.Item>
+      <uga:AddSheetConnections.NewSheetName>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">out_SecondSheetName</CSharpReference>
+        </OutArgument>
+      </uga:AddSheetConnections.NewSheetName>
+      <uga:AddSheetConnections.SheetName>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">in_SecondSheetName</CSharpValue>
+        </InArgument>
+      </uga:AddSheetConnections.SheetName>
+      <uga:AddSheetConnections.Spreadsheet>
+        <InArgument x:TypeArguments="ugdm:GDriveRemoteItem" x:Name="__ReferenceID3">
+          <CSharpValue x:TypeArguments="ugdm:GDriveRemoteItem" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">out_Spreadsheet</CSharpValue>
+        </InArgument>
+      </uga:AddSheetConnections.Spreadsheet>
+    </uga:AddSheetConnections>
+    <uga:DeleteSheetConnections BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" AuthScopesInvalid="False" ConnectionId="29a8b1e3-ef67-4e3b-85d4-065f6aebde7f" DisplayName="Delete Sheet" sap:VirtualizedContainerService.HintSize="450,228" sap2010:WorkflowViewState.IdRef="DeleteSheetConnections_1" ItemSelectionMode="UseExisting" UseConnectionService="True">
+      <uga:DeleteSheetConnections.FileIdBackup>
+        <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID6" StoredValue="UseExisting">
+          <usau:BackupSlot.BackupValues>
+            <scg:List x:TypeArguments="x:Object" x:Key="Browse" Capacity="3">
+              <InArgument x:TypeArguments="x:String">https://docs.google.com/spreadsheets/d/1QIU1KgaANFzX0A0xXwrC--7DMDYT1A683TZN2NQ6PEc/edit?usp=drivesdk</InArgument>
+              <InArgument x:TypeArguments="x:String" />
+              <InArgument x:TypeArguments="x:String">Ajax System Test Task</InArgument>
+            </scg:List>
+            <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
+              <InArgument x:TypeArguments="ugdm:GDriveRemoteItem">
+                <CSharpValue x:TypeArguments="ugdm:GDriveRemoteItem" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">in_SpreadsheetName</CSharpValue>
+              </InArgument>
+            </scg:List>
+            <scg:List x:TypeArguments="x:Object" x:Key="UrlOrId" Capacity="1">
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">out_Spreadsheet</CSharpValue>
+              </InArgument>
+            </scg:List>
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:DeleteSheetConnections.FileIdBackup>
+      <uga:DeleteSheetConnections.Item>
+        <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID6}" BrowserId="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" DriveId="{x:Null}" Existing="{x:Reference __ReferenceID5}" FriendlyName="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" FullPathHint="My Drive/Ajax System Test Task" InputMode="UseExisting">
+          <ugam:DriveItemArgument.ParentIdFullPathHint>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" Value="" />
+            </InArgument>
+          </ugam:DriveItemArgument.ParentIdFullPathHint>
+        </ugam:DriveItemArgument>
+      </uga:DeleteSheetConnections.Item>
+      <uga:DeleteSheetConnections.SheetName>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">DefaultSheetName</CSharpValue>
+        </InArgument>
+      </uga:DeleteSheetConnections.SheetName>
+      <uga:DeleteSheetConnections.Spreadsheet>
+        <InArgument x:TypeArguments="ugdm:GDriveRemoteItem" x:Name="__ReferenceID5">
+          <CSharpValue x:TypeArguments="ugdm:GDriveRemoteItem" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">out_Spreadsheet</CSharpValue>
+        </InArgument>
+      </uga:DeleteSheetConnections.Spreadsheet>
+    </uga:DeleteSheetConnections>
+  </Sequence>
+</Activity>

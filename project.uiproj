@@ -1,0 +1,6 @@
+{
+  "Name": "Ajax System Test Task",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "Main.xaml"
+}

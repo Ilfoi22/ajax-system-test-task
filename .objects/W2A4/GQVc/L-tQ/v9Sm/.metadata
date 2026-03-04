@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Employees",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "v9Sm75oxik6WWuPdvaAYVg",
+  "Reference": "bSxAyAaiK0i4H8_kVmvTVw/v9Sm75oxik6WWuPdvaAYVg",
+  "ParentRef": "bSxAyAaiK0i4H8_kVmvTVw/L-tQ4-ACukql7mQqNSn6pw",
+  "Created": "2026-03-03T14:08:39.2819649Z",
+  "Updated": "2026-03-03T14:08:39.2819649Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.26.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

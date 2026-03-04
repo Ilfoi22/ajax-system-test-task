@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="c_xhSOkHuUGZekJZlPKnAA" Reference="bSxAyAaiK0i4H8_kVmvTVw/6c0VqSCeIEWDeEe8JXNs6Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/home" CVScreenId="3456345f-1a29-40b5-ae7a-0a1c733da512" CvTextArea="458, 420, 868, 35" CvType="Text" DesignTimeRectangle="461, 417, 1000, 39" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;h1' tag='H1' /&gt;" Guid="a605efba-9215-4849-910d-394f71993af7" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.CvTextArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"Welcome, " + in_Email + " to System 1."</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.CvTextArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="dfa3a67061a5a3965662d768cc026445.jpg" xmlns="">0TbnoWeH84kGUzBXJC8CJRA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
